@@ -1,5 +1,5 @@
 (function fillRobloxForm() {
-    // Pure JS Dynamic Random Generation (e.g., "sahdkadhwqkh831")
+    
     const generateCredentials = () => {
         const letters = "abcdefghijklmnopqrstuvwxyz";
         const stringLength = Math.floor(Math.random() * (13 - 6 + 1)) + 6; // 6 to 13 characters
@@ -9,11 +9,11 @@
             randomString += letters.charAt(Math.floor(Math.random() * letters.length));
         }
         
-        // Exactly 3 digits
+        
         const digits = Math.floor(100 + Math.random() * 900).toString(); 
         const username = `${randomString}${digits}`;
 
-        // Random Password
+        
         const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
         let password = "";
         for (let i = 0; i < 14; i++) {
@@ -29,7 +29,7 @@
         gender: 'Male'
     };
 
-    // Special input updater framework bypass for React/Next
+    
     const forceValue = (id, value) => {
         const input = document.getElementById(id);
         if (!input) return;
@@ -47,11 +47,11 @@
         input.dispatchEvent(new Event('change', { bubbles: true }));
     };
 
-    // Force Random Username and Password into the UI
+    
     forceValue('signup-username', data.username);
     forceValue('signup-password', data.password);
 
-    // Set Birthday
+    
     const setDropdown = (id, val) => {
         const el = document.getElementById(id);
         if (el) {
@@ -63,14 +63,14 @@
     setDropdown('DayDropdown', data.birthday.day);
     setDropdown('YearDropdown', data.birthday.year);
 
-    // Click Gender Button
+    
     if (data.gender) {
         const genderId = data.gender === 'Male' ? 'MaleButton' : 'FemaleButton';
         const btn = document.getElementById(genderId);
         if (btn) btn.click();
     }
 
-    // Handle registration clicks
+    
     const attemptRegistration = (attemptNumber) => {
         const regBtn = document.getElementById('signup-button');
         if (regBtn) {
@@ -78,7 +78,7 @@
         }
     };
 
-    // Click execution timing sequence
+    
     setTimeout(() => {
         attemptRegistration(1);
         setTimeout(() => {
@@ -86,6 +86,6 @@
         }, 3000);
     }, 3000);
 
-    // Return credentials object to main node stream
+    
     return { username: data.username, password: data.password };
 })();
