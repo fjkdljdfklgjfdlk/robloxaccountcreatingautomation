@@ -46,7 +46,7 @@ async function run() {
       }
 
       
-      console.log("Waiting 25 seconds before closing the window...");
+      console.log("Waiting 3 minutes before closing the window...");
       await delay(60000);
 
     } catch (error) {
