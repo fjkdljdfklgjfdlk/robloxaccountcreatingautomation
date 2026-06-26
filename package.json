@@ -1,0 +1,13 @@
+{
+  "name": "roblox-form-filler",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Automated form filling with Google Chrome on Mac",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
